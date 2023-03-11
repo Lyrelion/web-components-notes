@@ -1,3 +1,10 @@
+/*
+ * @Description: 测试在 stencil 中使用 echarts
+ * @Author: Lyrelion
+ * @Date: 2023-03-10 12:35:36
+ * @LastEditTime: 2023-03-11 17:15:33
+ * @FilePath: \stencil-first\src\components\chart-bar\chart-bar.tsx
+ */
 import { Component, h, Prop, Element, Watch, Event, EventEmitter, Listen } from '@stencil/core';
 import * as echarts from 'echarts';
 

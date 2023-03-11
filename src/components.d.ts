@@ -39,6 +39,8 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface TestIonic {
+    }
 }
 export interface ChartBarCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -63,10 +65,17 @@ declare global {
         prototype: HTMLTestFirstElement;
         new (): HTMLTestFirstElement;
     };
+    interface HTMLTestIonicElement extends Components.TestIonic, HTMLStencilElement {
+    }
+    var HTMLTestIonicElement: {
+        prototype: HTMLTestIonicElement;
+        new (): HTMLTestIonicElement;
+    };
     interface HTMLElementTagNameMap {
         "chart-bar": HTMLChartBarElement;
         "my-component": HTMLMyComponentElement;
         "test-first": HTMLTestFirstElement;
+        "test-ionic": HTMLTestIonicElement;
     }
 }
 declare namespace LocalJSX {
@@ -104,10 +113,13 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface TestIonic {
+    }
     interface IntrinsicElements {
         "chart-bar": ChartBar;
         "my-component": MyComponent;
         "test-first": TestFirst;
+        "test-ionic": TestIonic;
     }
 }
 export { LocalJSX as JSX };
@@ -117,6 +129,7 @@ declare module "@stencil/core" {
             "chart-bar": LocalJSX.ChartBar & JSXBase.HTMLAttributes<HTMLChartBarElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "test-first": LocalJSX.TestFirst & JSXBase.HTMLAttributes<HTMLTestFirstElement>;
+            "test-ionic": LocalJSX.TestIonic & JSXBase.HTMLAttributes<HTMLTestIonicElement>;
         }
     }
 }

@@ -1,3 +1,10 @@
+/*
+ * @Description: 测试使用 yarn generate 生成组件
+ * @Author: Lyrelion
+ * @Date: 2023-03-10 08:57:08
+ * @LastEditTime: 2023-03-11 17:16:30
+ * @FilePath: \stencil-first\src\components\test-first\test-first.tsx
+ */
 import { Component, h, State, Prop } from '@stencil/core';
 import { format } from '../../utils/utils';
 

@@ -18,4 +18,6 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  // 全局 ts（可以引入一些第三方库）
+  globalScript: 'src/global/app.ts',
 };
