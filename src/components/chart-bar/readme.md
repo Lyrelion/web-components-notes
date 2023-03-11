@@ -7,11 +7,18 @@
 
 ## Properties
 
-| Property  | Attribute  | Description | Type               | Default     |
-| --------- | ---------- | ----------- | ------------------ | ----------- |
-| `chartId` | `chart-id` |             | `string`           | `undefined` |
-| `height`  | `height`   |             | `number \| string` | `undefined` |
-| `width`   | `width`    |             | `number \| string` | `undefined` |
+| Property      | Attribute | Description | Type               | Default     |
+| ------------- | --------- | ----------- | ------------------ | ----------- |
+| `echartsData` | --        |             | `number[]`         | `undefined` |
+| `height`      | `height`  |             | `number \| string` | `undefined` |
+| `width`       | `width`   |             | `number \| string` | `undefined` |
+
+
+## Events
+
+| Event      | Description | Type               |
+| ---------- | ----------- | ------------------ |
+| `barClick` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------
