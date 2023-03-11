@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/stencil-first.esm.js"></script>
+    <script nomodule src="/build/stencil-first.js"></script>
+  </head>
+  <body>
+    <!-- <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component> -->
+    <!-- <test-first first="first111" last="last111"></test-first> -->
+    <chart-bar width="600" height="600"></chart-bar>
+    <button id="changeChartsDataBtn">改变图表数据</button>
+
+    <script>
+      // 初始化图表
+      const chartBar = document.querySelector('chart-bar');
+      chartBar.echartsData = [Math.random() * 10, Math.random() * 10, Math.random() * 10, Math.random() * 10, Math.random() * 10, Math.random() * 10, Math.random() * 10];
+      chartBar.addEventListener('barClick', function (data) {
+        console.log('点击 echarts 后，组件发出的数据', data);
+      });
+
+      // 改变图表数据
+      const changeChartsDataBtn = document.querySelector('#changeChartsDataBtn');
+      changeChartsDataBtn.addEventListener('click', function () {
+        // chartBar.echartsData = []
+        chartBar.echartsData = [Math.random() * 10, Math.random() * 10, Math.random() * 10, Math.random() * 10, Math.random() * 10, Math.random() * 10, Math.random() * 10];
+      });
+    </script>
+  </body>
+</html>
