@@ -1,3 +1,11 @@
 :host {
   display: block;
 }
+
+/* 在组件内修改 ionic 组件样式 */
+/* 只能改有 part 属性的 */
+/* 直接以 标签名 ion-button 开头进行修改，不要用 .ion-button */
+ion-button::part(native) {
+  color: #fff;
+  background: red;
+}

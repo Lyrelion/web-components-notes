@@ -2,7 +2,7 @@
  * @Description: 该文件用于测试 stencil 编写的 Web Component
  * @Author: Lyrelion
  * @Date: 2023-03-10 08:27:01
- * @LastEditTime: 2023-03-11 17:17:31
+ * @LastEditTime: 2023-03-11 17:44:02
  * @FilePath: \stencil-first\src\index.html
 -->
 
@@ -16,6 +16,20 @@
     <script type="module" src="/build/stencil-first.esm.js"></script>
     <script nomodule src="/build/stencil-first.js"></script>
   </head>
+  <style>
+    /* 通过标签名使用 ::part 修改 shadowDOM 测试 ------ OK */
+    test-ionic::part(title) {
+      color: rgb(89, 47, 255);
+    }
+    /* 通过标签名使用 ::part 修改 子组件 shadowDOM 测试 ------ OK */
+    test-ionic::part(native) {
+      background: yellow;
+    }
+    /* 通过类名使用 ::part 修改 shadowDOM 测试 ------ OK */
+    .custom-test-ionic::part(title) {
+      font-weight: 700;
+    }
+  </style>
   <body>
     <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
 
@@ -43,6 +57,6 @@
     </script>
 
     <!-- 测试 ionic -->
-    <test-ionic></test-ionic>
+    <test-ionic class="custom-test-ionic"></test-ionic>
   </body>
 </html>
